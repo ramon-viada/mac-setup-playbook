@@ -1,0 +1,33 @@
+---
+configure_osx: true
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: true
+dockitems_remove: []
+dockitems_persist: []
+
+# Set to 'true' if you need to install/remove Apps.
+# Only set to false after first run
+configure_apps: true
+homebrew_taps:
+  - { name: nikitabobko/tap, url: 'https://github.com/nikitabobko/homebrew-tap.git' }
+
+homebrew_installed_packages:
+  - openshift-cli
+  - kubectl
+  - tree
+
+homebrew_cask_apps:
+  - displaylink
+  - font-hack-nerd-font
+  - alfred
+  - google-chrome
+  - tunnelblick
+  - visual-studio-code
+  - keepassxc
+  - kitty
+  - wezterm
+  - obsidian
+  - cheatsheet
+  - onedrive
+  - aerospace
+  - starship

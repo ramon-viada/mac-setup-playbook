@@ -1,0 +1,63 @@
+---
+- name: Only show active apps in dock
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: static-only
+    type: bool
+    value: true
+    state: present
+  notify: restart dock
+
+- name: Change dock orientation
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: orientation
+    type: string
+    value: right
+    state: present
+  notify: restart dock
+
+- name: Change dock itmes size
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: tilesize
+    type: int
+    value: "36"
+    state: present
+  notify: restart dock
+
+- name: Disable show recentApps in dock
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: show-recents
+    type: bool
+    value: false
+    state: present
+  notify: restart dock
+
+- name: Enable dock autohide
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: true
+    state: present
+  notify: restart dock
+
+- name: Change dock autohide animation time
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: autohide-time-modifier
+    type: float
+    value: "0.2"
+    state: present
+  notify: restart dock
+
+- name: Change dock autohide delay
+  community.general.osx_defaults:
+    domain: com.apple.dock
+    key: autohide-delay
+    type: float
+    value: "0"
+    state: present
+  notify: restart dock
